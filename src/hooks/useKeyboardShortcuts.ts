@@ -37,13 +37,16 @@ export const useKeyboardShortcuts = ({
         return;
       }
 
-      // Meta key shortcuts
-      if (e.metaKey) {
-        const numKey = Number.parseInt(e.key);
-        if (!Number.isNaN(numKey) && numKey >= 1 && numKey <= memos.length) {
-          e.preventDefault();
-          goToMemo(numKey - 1);
-          return;
+      // Alt key shortcuts
+      if (e.altKey) {
+        const match = e.code.match(/^Digit([1-9])$/);
+        if (match) {
+          const numKey = Number.parseInt(match[1]);
+          if (numKey <= memos.length) {
+            e.preventDefault();
+            goToMemo(numKey - 1);
+            return;
+          }
         }
 
         switch (e.key) {

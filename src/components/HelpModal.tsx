@@ -10,10 +10,10 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const shortcuts = [
-    { keys: ['Ctrl', '1-3'], description: 'メモ1-3に直接移動' },
-    { keys: ['⌘/Ctrl', '←'], description: '前のメモに移動' },
-    { keys: ['⌘/Ctrl', '→'], description: '次のメモに移動' },
-    { keys: ['⌘/Ctrl', 'Shift', 'C'], description: '現在のメモをコピー' },
+    { keys: ['⌥', '1-3'], description: 'メモ1-3に直接移動' },
+    { keys: ['⌥', '←'], description: '前のメモに移動' },
+    { keys: ['⌥', '→'], description: '次のメモに移動' },
+    { keys: ['⌥', 'Shift', 'C'], description: '現在のメモをコピー' },
     { keys: ['?'], description: 'このヘルプを表示' },
     { keys: ['ESC'], description: 'ヘルプを閉じる' },
   ];
