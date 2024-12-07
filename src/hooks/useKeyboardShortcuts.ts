@@ -58,7 +58,7 @@ export const useKeyboardShortcuts = ({
             e.preventDefault();
             onPrevious();
             break;
-          case 'c':
+          case 'Ç':
             if (e.shiftKey) {
               e.preventDefault();
               onCopy();
