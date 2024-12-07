@@ -37,10 +37,10 @@ export const useKeyboardShortcuts = ({
         return;
       }
 
-      // Meta/Ctrl key shortcuts
-      if (e.metaKey || e.ctrlKey) {
-        const numKey = parseInt(e.key);
-        if (!isNaN(numKey) && numKey >= 1 && numKey <= memos.length) {
+      // Meta key shortcuts
+      if (e.metaKey) {
+        const numKey = Number.parseInt(e.key);
+        if (!Number.isNaN(numKey) && numKey >= 1 && numKey <= memos.length) {
           e.preventDefault();
           goToMemo(numKey - 1);
           return;
